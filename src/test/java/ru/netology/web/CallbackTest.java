@@ -109,7 +109,7 @@ public class CallbackTest {
         $("[data-test-id=city] input").setValue("Томск");
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
-        $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(2));
+        $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(1));
         $("[data-test-id=name] input").setValue("Иванов Владимир");
         $("[data-test-id=phone] input").setValue("+79201234567");
         $("[data-test-id=agreement]").click();
