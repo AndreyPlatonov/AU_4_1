@@ -3,6 +3,7 @@ package ru.netology.web;
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Keys;
 
 import java.time.Duration;
 
@@ -28,6 +29,8 @@ public class CallbackTest {
         $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.CONTROL + "A");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.DELETE);
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
         $("[data-test-id=name] input").setValue("Иванов Владимир");
         $("[data-test-id=phone] input").setValue("+79201234567");
@@ -47,6 +50,8 @@ public class CallbackTest {
         $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.CONTROL + "A");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.DELETE);
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
         $("[data-test-id=name] input").setValue("Иванов Владимир");
         $("[data-test-id=phone] input").setValue("+79201234567");
@@ -64,6 +69,8 @@ public class CallbackTest {
         $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.CONTROL + "A");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.DELETE);
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
         $("[data-test-id=name] input").setValue("Иванов Владимир");
         $("[data-test-id=phone] input").setValue("+79201234567");
@@ -76,11 +83,12 @@ public class CallbackTest {
     @Test
     void submitFailedNullDate() {
 
-        FormatDate dateFormatter = new FormatDate();
         $("[data-test-id=city] input").setValue("Томск");
         $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.CONTROL + "A");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.DELETE);
         $("[data-test-id=date] input").setValue("");
         $("[data-test-id=name] input").setValue("Иванов Владимир");
         $("[data-test-id=phone] input").setValue("+79201234567");
@@ -99,6 +107,8 @@ public class CallbackTest {
         $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.CONTROL + "A");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.DELETE);
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(3));
         $("[data-test-id=name] input").setValue("Иванов Владимир");
         $("[data-test-id=phone] input").setValue("+79201234567");
@@ -116,14 +126,15 @@ public class CallbackTest {
         $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.CONTROL + "A");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.DELETE);
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(1));
         $("[data-test-id=name] input").setValue("Иванов Владимир");
         $("[data-test-id=phone] input").setValue("+79201234567");
         $("[data-test-id=agreement]").click();
         $$("button").find(exactText("Забронировать")).click();
         $("[data-test-id=date] .input").shouldHave(Condition.cssClass("input_invalid"));
-        ;
-
+        
     }
 
     @Test
@@ -134,6 +145,8 @@ public class CallbackTest {
         $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.CONTROL + "A");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.DELETE);
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
         $("[data-test-id=name] input").setValue("");
         $("[data-test-id=phone] input").setValue("+79201234567");
@@ -151,6 +164,8 @@ public class CallbackTest {
         $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.CONTROL + "A");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.DELETE);
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
         $("[data-test-id=name] input").setValue("Иванов Иван222");
         $("[data-test-id=phone] input").setValue("+79201234567");
@@ -168,6 +183,8 @@ public class CallbackTest {
         $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.CONTROL + "A");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.DELETE);
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
         $("[data-test-id=name] input").setValue("Иванов Владимир");
         $("[data-test-id=phone] input").setValue("");
@@ -185,6 +202,8 @@ public class CallbackTest {
         $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.CONTROL + "A");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.DELETE);
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
         $("[data-test-id=name] input").setValue("Иванов Владимир");
         $("[data-test-id=phone] input").setValue("+7920123456723");
@@ -202,6 +221,8 @@ public class CallbackTest {
         $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.CONTROL + "A");
+        $("[data-test-id=date] .input__control").sendKeys(Keys.DELETE);
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
         $("[data-test-id=name] input").setValue("Иванов Владимир");
         $("[data-test-id=phone] input").setValue("+79201234567");
