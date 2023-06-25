@@ -25,6 +25,7 @@ public class CallbackTest {
 
         FormatDate dateFormatter = new FormatDate();
         $("[data-test-id=city] input").setValue("Томск");
+        $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
@@ -43,6 +44,7 @@ public class CallbackTest {
 
         FormatDate dateFormatter = new FormatDate();
         $("[data-test-id=city] input").setValue("");
+        $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
@@ -59,6 +61,7 @@ public class CallbackTest {
 
         FormatDate dateFormatter = new FormatDate();
         $("[data-test-id=city] input").setValue("ввввввв");
+        $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
@@ -70,11 +73,12 @@ public class CallbackTest {
 
     }
 
-   /* @Test
+    @Test
     void submitFailedNullDate() {
 
         FormatDate dateFormatter = new FormatDate();
         $("[data-test-id=city] input").setValue("Томск");
+        $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
         $("[data-test-id=date] input").setValue("");
@@ -85,13 +89,14 @@ public class CallbackTest {
         $("[data-test-id=date] .input").shouldHave(Condition.cssClass("input_invalid"));
 
 
-    }*/
+    }
 
     @Test
     void submitSuccessBoundDate() {
 
         FormatDate dateFormatter = new FormatDate();
         $("[data-test-id=city] input").setValue("Томск");
+        $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(3));
@@ -103,27 +108,30 @@ public class CallbackTest {
 
     }
 
-    /* @Test
-     void submitFailedBeforeDate() {
+    @Test
+    void submitFailedBeforeDate() {
 
-         FormatDate dateFormatter = new FormatDate();
-         String dateFormat=dateFormatter.currentPlusDays(1);
-         $("[data-test-id=city] input").setValue("Томск");
-         $("[data-test-id=date] input").doubleClick();
-         $("[data-test-id=date] input").sendKeys(" ");
-         $("[data-test-id=date] input").setValue(dateFormat);
-         $("[data-test-id=name] input").setValue("Иванов Владимир");
-         $("[data-test-id=phone] input").setValue("+79201234567");
-         $("[data-test-id=agreement]").click();
-         $$("button").find(exactText("Забронировать")).click();
-         $("[data-test-id=date] .input").shouldHave(Condition.cssClass("input_invalid"));;
+        FormatDate dateFormatter = new FormatDate();
+        $("[data-test-id=city] input").setValue("Томск");
+        $("[data-test-id=date] input").clear();
+        $("[data-test-id=date] input").doubleClick();
+        $("[data-test-id=date] input").sendKeys(" ");
+        $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(1));
+        $("[data-test-id=name] input").setValue("Иванов Владимир");
+        $("[data-test-id=phone] input").setValue("+79201234567");
+        $("[data-test-id=agreement]").click();
+        $$("button").find(exactText("Забронировать")).click();
+        $("[data-test-id=date] .input").shouldHave(Condition.cssClass("input_invalid"));
+        ;
 
-     }*/
+    }
+
     @Test
     void submitFailedNullName() {
 
         FormatDate dateFormatter = new FormatDate();
         $("[data-test-id=city] input").setValue("Томск");
+        $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
@@ -140,6 +148,7 @@ public class CallbackTest {
 
         FormatDate dateFormatter = new FormatDate();
         $("[data-test-id=city] input").setValue("Томск");
+        $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
@@ -156,6 +165,7 @@ public class CallbackTest {
 
         FormatDate dateFormatter = new FormatDate();
         $("[data-test-id=city] input").setValue("Томск");
+        $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
@@ -172,6 +182,7 @@ public class CallbackTest {
 
         FormatDate dateFormatter = new FormatDate();
         $("[data-test-id=city] input").setValue("Томск");
+        $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
@@ -188,6 +199,7 @@ public class CallbackTest {
 
         FormatDate dateFormatter = new FormatDate();
         $("[data-test-id=city] input").setValue("Томск");
+        $("[data-test-id=date] input").clear();
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(" ");
         $("[data-test-id=date] input").setValue(dateFormatter.currentPlusDays(4));
